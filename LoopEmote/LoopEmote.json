@@ -1,0 +1,16 @@
+{
+	"Author": "Ririya Riya",
+	"Name": "Loop Emote",
+	"Punchline": "Loop any emotes forever.",
+	"Description": "Ever wanted emotes like /read to loop forever? Have you tried using AHK scripts or something similar to achieve that result by repeatedly entering the /command with a specified interval?\nWell, now you can do all that with this plugin without all the jank that comes with AHK scripts and ACTUALLY opening your chat to type it in!\n\nCommands:\n/lemote config - Opens the config page.\n/lemote <emote command> [loop interval in ms] [extra tags] - Starts looping the specified emote with the specified interval (if interval is not specified, uses the default loop interval that you can set in the config)\n/lemote stop - Stops the current loop\n\nExtra Tags:\n'move' - movement no longer interrupts the loop\n\nExamples:\n'/lemote read 11000' causes the 'read' emote to loop with an interval of 11000 ms\n'/lemote reflect 6000 move' causes the 'reflect' emote to loop with an interval of 6000 ms AND allows movement without interrupting the loop",
+	"InternalName": "loopEmote",
+	"ApplicableVersion": "any",
+	"Tags": [
+		"Loop",
+		"Emote",
+		"Infinite",
+		"Repeat",
+		"Ririya",
+		"Riya"
+	]
+}
