@@ -37,7 +37,7 @@ public class ConfigWindow : Window, IDisposable
 
 		var doPrint = Configuration.PrintInChat;
 
-		if(ImGui.Checkbox("Print In Chat", ref doPrint))
+		if(ImGui.Checkbox("Print In Chat - Prints out internal messages whenever you start a loop, or stop a loop in chat. ONLY VISIBLE TO YOU.", ref doPrint))
 		{
 			Configuration.PrintInChat = doPrint;
 			Configuration.Save();

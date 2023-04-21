@@ -7,7 +7,7 @@ using System.Text;
 namespace LoopEmote;
 
 /// <summary>
-/// Massive thanks to the TPie owner for allowing me to steal this class from them.
+/// Taken directly from TPie D:
 /// </summary>
 internal unsafe class ChatHelper : IDisposable
 {

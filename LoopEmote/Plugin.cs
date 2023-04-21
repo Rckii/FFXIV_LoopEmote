@@ -92,13 +92,14 @@ namespace LoopEmote
 			if (!loopStopwatch.IsRunning)
 				return;
 
+			// Just a quick and hacky movement check
 			if (movementCheckStopwatch.ElapsedMilliseconds > MOVEMENT_CHECK_INTERVAL)
 			{
 				if (!m_allowMovement)
 				{
 					Vector3? newPos = m_clientState.LocalPlayer?.Position;
 
-					if (m_pos != null && m_pos != newPos)
+					if (m_pos != null && newPos != null && m_pos != newPos)
 						TryStopLoop("movement");
 
 					m_pos = newPos;
@@ -149,10 +150,6 @@ namespace LoopEmote
 				return;
 			}
 
-			// in response to the slash command, just display our main ui
-			//MainWindow.IsOpen = true;
-			//m_chat.Print(args);
-
 			m_pos = null;
 			loopStopwatch.Reset();
 			loopStopwatch.Start();
@@ -167,9 +164,8 @@ namespace LoopEmote
 
 			string text = args;
 
-			m_intervalInMS = Math.Max(Configuration.LoopIntervalInMS, 500);
+			m_intervalInMS = Math.Max(Configuration.LoopIntervalInMS, Plugin.MIN_INTERVAL);
 
-			// If there are two or more arguments, try to convert the last argument into the delay
 			if (aargs.Length > 1)
 			{
 				text = aargs[0];
@@ -199,11 +195,9 @@ namespace LoopEmote
 
 			PrintInChat("Started looping emote '" + text + "' with interval of '" + m_intervalInMS + " ms'");
 
-
 			m_command = text;
 
 			ChatHelper.SendChatMessage(m_command);
-
 		}
 
 		void TryStopLoop(string reason = "")
