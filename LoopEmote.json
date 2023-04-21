@@ -1,4 +1,4 @@
-{
+[{
 	"Author": "Rcki",
 	"Name": "Loop Emote",
 	"Punchline": "Loop any emotes forever.",
@@ -18,4 +18,4 @@
 	"DownloadLinkUpdate": "https://github.com/Rckii/FFXIV_LoopEmote/releases/download/1.0/LoopEmote.zip",
 	"_isDip17Plugin": false,
 	"_Dip17Channel": null
-}
+}]
