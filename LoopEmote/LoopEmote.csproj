@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors></Authors>
     <Company></Company>
-	<PluginVersion>1.0</PluginVersion>
+	<Version>1.0</Version>
     <Description>Loop emotes in FFXIV.</Description>
     <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/Rckii/FFXIV_InfiniteEmote</PackageProjectUrl>
